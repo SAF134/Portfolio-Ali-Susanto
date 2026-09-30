@@ -11,29 +11,29 @@ export default function OrganizationSection({
   organizationList,
 }: OrganizationSectionProps) {
   return (
-    <section id="organisasi" className="py-20 sm:py-28 border-b border-neutral-border/80 bg-white">
+    <section
+      id="organisasi"
+      className="py-20 sm:py-28 border-b border-neutral-border/80 bg-white"
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-heading">
-            Jejak Organisasi & <span className="text-brand-blue">Pengabdian.</span>
+            Jejak Organisasi &{" "}
+            <span className="text-brand-blue">Pengabdian.</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-neutral-muted">
-            Kontribusi kepemimpinan dalam organisasi kemasyarakatan, kepemudaan, dan gerakan
-            perkoperasian.
+            Kontribusi kepemimpinan dalam organisasi kemasyarakatan, kepemudaan,
+            dan gerakan perkoperasian.
           </p>
-          <div className="inline-flex items-center gap-1.5 mt-4 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-neutral-heading text-xs font-bold shadow-xs">
-            <Users className="w-3.5 h-3.5 text-brand-blue" />
-            <span>{organizationList.length} Riwayat Organisasi</span>
-          </div>
         </div>
 
-        {/* 10 Linear Cards dengan warna #A3A3A3 dan bayangan tegas */}
+        {/* 10 Linear Cards dengan warna #D9D9D9 dan bayangan tegas */}
         <div className="space-y-4">
           {organizationList.map((item, index) => (
             <div
               key={item.id}
-              className="group bg-[#A3A3A3] border border-neutral-borderHover rounded-2xl p-5 sm:p-6 shadow-card hover:shadow-cardHover transition-all duration-300 hover:-translate-y-1"
+              className="group bg-[#D9D9D9] border border-neutral-borderHover rounded-2xl p-5 sm:p-6 shadow-card hover:shadow-cardHover transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-start gap-4">

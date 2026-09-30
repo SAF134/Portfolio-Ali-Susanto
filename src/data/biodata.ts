@@ -44,7 +44,7 @@ export const educationData: EducationItem[] = [
   {
     id: "edu-f-3",
     type: "formal",
-    institution: "Institut Pertanian Bogor (IPB)",
+    institution: "Institut Pertanian Bogor",
     majorOrFocus: "D3 Pertanian",
     period: "1989 – 1992",
     location: "Bogor",
@@ -73,7 +73,7 @@ export const educationData: EducationItem[] = [
     period: "1977 – 1983",
     location: "Solok",
   },
-  // Non Formal Education & Trainings
+  // Non Formal Education
   {
     id: "edu-nf-1",
     type: "non-formal",

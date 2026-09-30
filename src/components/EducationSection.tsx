@@ -7,12 +7,19 @@ interface EducationSectionProps {
   educationList: EducationItem[];
 }
 
-export default function EducationSection({ educationList }: EducationSectionProps) {
+export default function EducationSection({
+  educationList,
+}: EducationSectionProps) {
   const formalEdu = educationList.filter((item) => item.type === "formal");
-  const nonFormalEdu = educationList.filter((item) => item.type === "non-formal");
+  const nonFormalEdu = educationList.filter(
+    (item) => item.type === "non-formal",
+  );
 
   return (
-    <section id="pendidikan" className="py-20 sm:py-28 border-b border-neutral-border/80 bg-white">
+    <section
+      id="pendidikan"
+      className="py-20 sm:py-28 border-b border-neutral-border/80 bg-white"
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
@@ -20,8 +27,8 @@ export default function EducationSection({ educationList }: EducationSectionProp
             Riwayat <span className="text-brand-blue">Pendidikan.</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-neutral-muted">
-            Latar belakang akademis formal dan pelatihan kedinasan selama menempuh perjalanan
-            pengabdian.
+            Latar belakang akademis formal dan pelatihan kedinasan selama
+            menempuh perjalanan pengabdian.
           </p>
         </div>
 
@@ -34,16 +41,13 @@ export default function EducationSection({ educationList }: EducationSectionProp
             <h3 className="text-lg sm:text-xl font-bold text-neutral-heading tracking-tight">
               Pendidikan Formal
             </h3>
-            <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-neutral-heading">
-              {formalEdu.length} Tingkat
-            </span>
           </div>
 
           <div className="space-y-4">
             {formalEdu.map((item) => (
               <div
                 key={item.id}
-                className="group relative bg-[#A3A3A3] border border-neutral-borderHover rounded-2xl p-5 sm:p-6 shadow-card hover:shadow-cardHover transition-all duration-300 hover:-translate-y-1"
+                className="group relative bg-[#D9D9D9] border border-neutral-borderHover rounded-2xl p-5 sm:p-6 shadow-card hover:shadow-cardHover transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="flex items-start gap-4">
@@ -88,18 +92,15 @@ export default function EducationSection({ educationList }: EducationSectionProp
               <Award className="w-4 h-4" />
             </div>
             <h3 className="text-lg sm:text-xl font-bold text-neutral-heading tracking-tight">
-              Pendidikan Non-Formal & Pelatihan Kedinasan
+              Pendidikan Non-Formal
             </h3>
-            <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-neutral-heading">
-              {nonFormalEdu.length} Diklat
-            </span>
           </div>
 
           <div className="space-y-4">
             {nonFormalEdu.map((item) => (
               <div
                 key={item.id}
-                className="group relative bg-[#A3A3A3] border border-neutral-borderHover rounded-2xl p-5 sm:p-6 shadow-card hover:shadow-cardHover transition-all duration-300 hover:-translate-y-1"
+                className="group relative bg-[#D9D9D9] border border-neutral-borderHover rounded-2xl p-5 sm:p-6 shadow-card hover:shadow-cardHover transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="flex items-start gap-4">

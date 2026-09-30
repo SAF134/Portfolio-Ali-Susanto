@@ -18,7 +18,7 @@ export default function Footer({ profile }: FooterProps) {
   return (
     <footer className="py-8 pb-24 sm:pb-8 text-center text-xs text-neutral-muted bg-white border-t border-neutral-border">
       <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="font-medium">© 2026 {profile.name}, {profile.titles}. Hak Cipta Dilindungi.</p>
+        <p className="font-medium">© 2026 {profile.name}. Hak Cipta Dilindungi.</p>
 
         <button
           type="button"

@@ -16,7 +16,7 @@ const config: Config = {
         canvas: {
           main: "#FFFFFF",
           subtle: "#F8FAFC",
-          card: "#A3A3A3",
+          card: "#D9D9D9",
         },
         brand: {
           blue: "#1D4ED8",
@@ -25,7 +25,7 @@ const config: Config = {
           blueDark: "#1E40AF",
         },
         neutral: {
-          anchor: "#A3A3A3",
+          anchor: "#D9D9D9",
           heading: "#0F172A",
           body: "#1E293B",
           muted: "#475569",
@@ -35,9 +35,11 @@ const config: Config = {
       },
       boxShadow: {
         card: "0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
-        cardHover: "0 20px 35px -5px rgba(0, 0, 0, 0.22), 0 10px 15px -5px rgba(29, 78, 216, 0.15)",
+        cardHover:
+          "0 20px 35px -5px rgba(0, 0, 0, 0.22), 0 10px 15px -5px rgba(29, 78, 216, 0.15)",
         btn: "0 6px 16px -2px rgba(15, 23, 42, 0.2), 0 2px 4px -1px rgba(15, 23, 42, 0.12)",
-        btnHover: "0 10px 22px -2px rgba(15, 23, 42, 0.3), 0 4px 6px -1px rgba(15, 23, 42, 0.15)",
+        btnHover:
+          "0 10px 22px -2px rgba(15, 23, 42, 0.3), 0 4px 6px -1px rgba(15, 23, 42, 0.15)",
         nav: "0 12px 32px -8px rgba(0, 0, 0, 0.18)",
       },
       aspectRatio: {

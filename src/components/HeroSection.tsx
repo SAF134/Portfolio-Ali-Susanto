@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Download, MessageCircle, MapPin, Phone, Building2, CheckCircle2 } from "lucide-react";
+import {
+  Download,
+  MessageCircle,
+  MapPin,
+  Phone,
+  Building2,
+  CheckCircle2,
+} from "lucide-react";
 import { ProfileData } from "@/types/portfolio";
 import ProfilePhotoFrame from "./ProfilePhotoFrame";
 
@@ -13,12 +20,14 @@ export default function HeroSection({ profile }: HeroSectionProps) {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const handleDownloadCv = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    setToastMessage("Mengunduh berkas CV... (File sedang dalam proses pembaharuan)");
+    setToastMessage(
+      "Mengunduh berkas CV... (File sedang dalam proses pembaharuan)",
+    );
     setTimeout(() => setToastMessage(null), 4000);
   };
 
   const whatsappUrl = `https://wa.me/${profile.whatsappNumber}?text=${encodeURIComponent(
-    profile.whatsappMessage
+    profile.whatsappMessage,
   )}`;
 
   return (
@@ -83,10 +92,10 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               </div>
             )}
 
-            {/* Kartu Informasi: Warna #A3A3A3 dengan bayangan tegas */}
+            {/* Kartu Informasi: Warna #D9D9D9 dengan bayangan tegas */}
             <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-4 border-t border-neutral-border">
               {/* Kartu Kantor */}
-              <div className="bg-[#A3A3A3] border border-neutral-borderHover p-4 rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
+              <div className="bg-[#D9D9D9] border border-neutral-borderHover p-4 rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold text-neutral-heading mb-1.5">
                     <div className="w-6 h-6 rounded-md bg-white text-brand-blue flex items-center justify-center shadow-xs">
@@ -101,7 +110,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               </div>
 
               {/* Kartu Telepon */}
-              <div className="bg-[#A3A3A3] border border-neutral-borderHover p-4 rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
+              <div className="bg-[#D9D9D9] border border-neutral-borderHover p-4 rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold text-neutral-heading mb-1.5">
                     <div className="w-6 h-6 rounded-md bg-white text-brand-blue flex items-center justify-center shadow-xs">
@@ -113,11 +122,10 @@ export default function HeroSection({ profile }: HeroSectionProps) {
                     {profile.phone}
                   </p>
                 </div>
-                <span className="text-[11px] font-semibold text-slate-800 mt-2">Kanal Resmi</span>
               </div>
 
               {/* Kartu Domisili */}
-              <div className="bg-[#A3A3A3] border border-neutral-borderHover p-4 rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
+              <div className="bg-[#D9D9D9] border border-neutral-borderHover p-4 rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold text-neutral-heading mb-1.5">
                     <div className="w-6 h-6 rounded-md bg-white text-brand-blue flex items-center justify-center shadow-xs">

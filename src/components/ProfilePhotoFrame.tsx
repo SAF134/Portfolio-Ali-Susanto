@@ -13,8 +13,8 @@ export default function ProfilePhotoFrame({
 }: ProfilePhotoFrameProps) {
   return (
     <div className="flex flex-col items-center w-full">
-      {/* Frame 9:16 Fixed with #A3A3A3 tone and pronounced shade */}
-      <div className="w-full max-w-[270px] sm:max-w-[310px] aspect-[9/16] relative rounded-[28px] sm:rounded-[36px] overflow-hidden border-2 border-neutral-borderHover bg-[#A3A3A3] p-4 sm:p-6 flex flex-col items-center justify-center text-center shadow-card hover:shadow-cardHover group transition-all duration-300">
+      {/* Frame 9:16 Fixed with #D9D9D9 tone and pronounced shade */}
+      <div className="w-full max-w-[270px] sm:max-w-[310px] aspect-[9/16] relative rounded-[28px] sm:rounded-[36px] overflow-hidden border-2 border-neutral-borderHover bg-[#D9D9D9] p-4 sm:p-6 flex flex-col items-center justify-center text-center shadow-card hover:shadow-cardHover group transition-all duration-300">
         {/* Decorative corner markers */}
         <div className="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-neutral-heading rounded-tl-sm" />
         <div className="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-neutral-heading rounded-tr-sm" />
@@ -37,14 +37,6 @@ export default function ProfilePhotoFrame({
               <p className="text-sm sm:text-base font-extrabold text-neutral-heading tracking-tight">
                 Belum ada gambar
               </p>
-              <p className="text-xs text-slate-800 font-bold mt-0.5 font-mono">
-                Rasio 9:16
-              </p>
-            </div>
-
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-300 text-[11px] font-bold text-neutral-heading shadow-btn">
-              <Sparkles className="w-3 h-3 text-brand-blue" />
-              <span>Frame foto siap pakai</span>
             </div>
           </div>
         )}

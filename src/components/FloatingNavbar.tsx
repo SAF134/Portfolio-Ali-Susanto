@@ -62,14 +62,13 @@ export default function FloatingNavbar() {
   };
 
   return (
-    /* Posisi: di Desktop ada di atas (top-6), di Mobile pindah ke bawah (bottom-4) */
     <header className="fixed bottom-4 sm:bottom-auto sm:top-6 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
       <nav
         aria-label="Navigasi Utama Portofolio"
-        className={`pointer-events-auto flex items-center justify-center gap-1.5 sm:gap-2 p-1.5 sm:p-2 rounded-full border transition-all duration-300 ${
+        className={`pointer-events-auto flex items-center justify-center gap-1.5 sm:gap-2 p-1.5 sm:p-2 rounded-full border border-slate-300 transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md border-neutral-border shadow-nav"
-            : "bg-white/90 backdrop-blur-sm border-neutral-border/90 shadow-card"
+            ? "bg-white/95 backdrop-blur-md shadow-nav"
+            : "bg-white/90 backdrop-blur-sm shadow-card"
         }`}
       >
         {navItems.map((item) => {
@@ -84,13 +83,12 @@ export default function FloatingNavbar() {
               aria-label={item.label}
               className={`flex items-center justify-center gap-2 p-2.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue ${
                 isActive
-                  ? "bg-neutral-heading text-white shadow-sm font-semibold"
-                  : "text-neutral-body hover:text-neutral-heading hover:bg-slate-100"
+                  ? "bg-neutral-heading text-white font-bold shadow-btn"
+                  : "text-neutral-body hover:text-neutral-heading hover:bg-slate-100/90"
               }`}
               aria-current={isActive ? "page" : undefined}
             >
               <Icon className="w-5 h-5 sm:w-4 sm:h-4 shrink-0" />
-              {/* Di Mobile hanya ikon (hidden), di Desktop muncul teksnya (sm:inline) */}
               <span className="hidden sm:inline">{item.label}</span>
             </a>
           );

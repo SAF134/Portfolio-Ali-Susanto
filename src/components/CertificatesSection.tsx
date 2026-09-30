@@ -14,80 +14,80 @@ export default function CertificatesSection({
   const [selectedCert, setSelectedCert] = useState<CertificateFrameItem | null>(null);
 
   return (
-    <section id="sertifikat" className="py-20 sm:py-28 border-b border-neutral-border/60">
+    <section id="sertifikat" className="py-20 sm:py-28 border-b border-neutral-border/80 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-heading">
             Sertifikat & <span className="text-brand-blue">Penghargaan.</span>
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-neutral-body">
+          <p className="mt-3 text-sm sm:text-base text-neutral-muted">
             Bukti kompetensi pengawasan, diklat kedinasan, dan apresiasi pengabdian lembaga.
           </p>
-          <div className="inline-flex items-center gap-2 mt-4 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-brand-blue text-xs font-semibold">
+          <div className="inline-flex items-center gap-2 mt-4 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-brand-blue text-xs font-bold shadow-xs">
             <Info className="w-3.5 h-3.5 shrink-0" />
             <span>Frame disiapkan dengan rasio standar dokumen A4 (1,414 : 1)</span>
           </div>
         </div>
 
-        {/* 2-Column Grid (Desktop) / 1-Column (Mobile) */}
+        {/* 2-Column Grid dengan kartu #A3A3A3 dan bayangan tegas */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {certificates.map((cert) => (
             <div
               key={cert.id}
-              className="bg-white border border-neutral-border hover:border-slate-300 rounded-[24px] p-5 sm:p-6 shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between group"
+              className="bg-[#A3A3A3] border border-neutral-borderHover rounded-[24px] p-5 sm:p-6 shadow-card hover:shadow-cardHover transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group"
             >
               {/* A4 Landscape Frame (1.414 : 1) */}
               <div
-                className="w-full aspect-[1.414/1] rounded-[18px] border-2 border-dashed border-slate-300 bg-gradient-to-b from-slate-50 via-blue-50/20 to-slate-100 relative overflow-hidden flex flex-col items-center justify-center p-4 text-center group-hover:border-brand-blue/50 transition-colors"
+                className="w-full aspect-[1.414/1] rounded-[18px] border-2 border-dashed border-slate-500/60 bg-slate-100/90 relative overflow-hidden flex flex-col items-center justify-center p-4 text-center group-hover:border-neutral-heading transition-colors shadow-inner"
                 role="img"
                 aria-label={`${cert.code} - ${cert.title} (Belum ada gambar)`}
               >
                 {/* Decorative Certificate Ornaments */}
-                <div className="absolute inset-3 border border-slate-200/80 rounded-xl pointer-events-none" />
-                <div className="absolute top-4 left-4 w-2 h-2 border-t-2 border-l-2 border-slate-400" />
-                <div className="absolute top-4 right-4 w-2 h-2 border-t-2 border-r-2 border-slate-400" />
-                <div className="absolute bottom-4 left-4 w-2 h-2 border-b-2 border-l-2 border-slate-400" />
-                <div className="absolute bottom-4 right-4 w-2 h-2 border-b-2 border-r-2 border-slate-400" />
+                <div className="absolute inset-3 border border-slate-300 rounded-xl pointer-events-none" />
+                <div className="absolute top-4 left-4 w-2 h-2 border-t-2 border-l-2 border-slate-500" />
+                <div className="absolute top-4 right-4 w-2 h-2 border-t-2 border-r-2 border-slate-500" />
+                <div className="absolute bottom-4 left-4 w-2 h-2 border-b-2 border-l-2 border-slate-500" />
+                <div className="absolute bottom-4 right-4 w-2 h-2 border-b-2 border-r-2 border-slate-500" />
 
                 {cert.imageSrc ? (
                   <img
                     src={cert.imageSrc}
                     alt={cert.title}
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg shadow-sm"
                   />
                 ) : (
                   <div className="relative z-10 flex flex-col items-center justify-center space-y-2.5 px-4">
-                    <div className="w-12 h-12 rounded-xl bg-white shadow-xs border border-slate-200 flex items-center justify-center text-slate-400 group-hover:text-brand-blue group-hover:scale-105 transition-all">
-                      <FileText className="w-6 h-6 stroke-[1.7]" />
+                    <div className="w-12 h-12 rounded-xl bg-white shadow-btn border border-slate-200 flex items-center justify-center text-brand-blue group-hover:scale-105 transition-all">
+                      <FileText className="w-6 h-6 stroke-[1.8]" />
                     </div>
 
                     <div>
-                      <p className="text-sm font-bold text-neutral-heading tracking-tight">
+                      <p className="text-sm font-extrabold text-neutral-heading tracking-tight">
                         {cert.placeholderText}
                       </p>
-                      <p className="text-[11px] font-mono text-neutral-muted mt-0.5">
+                      <p className="text-[11px] font-mono text-slate-800 font-bold mt-0.5">
                         Rasio A4 Landscape (1,414 : 1)
                       </p>
                     </div>
 
-                    <span className="text-[10px] uppercase tracking-wider font-semibold text-brand-blue bg-blue-50/80 px-2 py-0.5 rounded-full border border-blue-100">
+                    <span className="text-[10px] uppercase tracking-wider font-extrabold text-brand-blue bg-white px-2.5 py-0.5 rounded-full border border-blue-200 shadow-xs">
                       Ukuran 29,7 × 21 cm
                     </span>
                   </div>
                 )}
               </div>
 
-              {/* Card Footer Info & Action */}
-              <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+              {/* Card Footer Info & Action with Button Shade */}
+              <div className="mt-5 pt-4 border-t border-neutral-400/60 flex items-center justify-between gap-3">
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5">
                     <Award className="w-3.5 h-3.5 text-brand-blue shrink-0" />
-                    <span className="text-xs font-mono font-bold text-neutral-muted">
+                    <span className="text-xs font-mono font-extrabold text-neutral-heading">
                       {cert.code}
                     </span>
                   </div>
-                  <h3 className="text-sm font-bold text-neutral-heading truncate mt-0.5" title={cert.title}>
+                  <h3 className="text-sm font-extrabold text-neutral-heading truncate mt-0.5" title={cert.title}>
                     {cert.title}
                   </h3>
                 </div>
@@ -95,7 +95,7 @@ export default function CertificatesSection({
                 <button
                   type="button"
                   onClick={() => setSelectedCert(cert)}
-                  className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-neutral-heading text-white text-xs font-semibold shadow-xs hover:bg-slate-800 active:scale-95 transition-all"
+                  className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-neutral-heading text-white text-xs font-bold shadow-btn hover:shadow-btnHover hover:bg-slate-800 active:scale-95 transition-all"
                   aria-label={`Lihat detail ${cert.code}`}
                 >
                   <span>Lihat Detail</span>
@@ -146,7 +146,7 @@ export default function CertificatesSection({
               <button
                 type="button"
                 onClick={() => setSelectedCert(null)}
-                className="px-4 py-2 rounded-full bg-neutral-heading text-white text-xs font-semibold hover:bg-slate-800 transition-colors"
+                className="px-5 py-2.5 rounded-full bg-neutral-heading text-white text-xs font-bold shadow-btn hover:shadow-btnHover hover:bg-slate-800 transition-all"
               >
                 Tutup
               </button>

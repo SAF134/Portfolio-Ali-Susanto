@@ -14,9 +14,9 @@ const config: Config = {
       },
       colors: {
         canvas: {
-          main: "#858585",
-          subtle: "#7d7d7d",
-          card: "#FFFFFF",
+          main: "#FFFFFF",
+          subtle: "#F8FAFC",
+          card: "#A3A3A3",
         },
         brand: {
           blue: "#1D4ED8",
@@ -25,24 +25,20 @@ const config: Config = {
           blueDark: "#1E40AF",
         },
         neutral: {
-          anchor: "#858585",
+          anchor: "#A3A3A3",
           heading: "#0F172A",
           body: "#1E293B",
-          muted: "#334155",
-          border: "#E2E8F0",
-          borderHover: "#CBD5E1",
-        },
-        status: {
-          greenDot: "#10B981",
-          greenBg: "#ECFDF5",
-          greenText: "#065F46",
+          muted: "#475569",
+          border: "#D1D5DB",
+          borderHover: "#9CA3AF",
         },
       },
       boxShadow: {
-        card: "0 4px 14px -2px rgba(0, 0, 0, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.08)",
-        cardHover: "0 16px 28px -6px rgba(0, 0, 0, 0.2), 0 6px 12px -2px rgba(29, 78, 216, 0.12)",
-        nav: "0 10px 30px -10px rgba(0, 0, 0, 0.25)",
-        glow: "0 0 25px -5px rgba(37, 99, 235, 0.2)",
+        card: "0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+        cardHover: "0 20px 35px -5px rgba(0, 0, 0, 0.22), 0 10px 15px -5px rgba(29, 78, 216, 0.15)",
+        btn: "0 6px 16px -2px rgba(15, 23, 42, 0.2), 0 2px 4px -1px rgba(15, 23, 42, 0.12)",
+        btnHover: "0 10px 22px -2px rgba(15, 23, 42, 0.3), 0 4px 6px -1px rgba(15, 23, 42, 0.15)",
+        nav: "0 12px 32px -8px rgba(0, 0, 0, 0.18)",
       },
       aspectRatio: {
         a4: "1.414 / 1",

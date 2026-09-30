@@ -24,7 +24,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
   return (
     <section
       id="profil"
-      className="pt-24 sm:pt-36 pb-16 sm:pb-24 border-b border-neutral-border/60 relative overflow-hidden"
+      className="pt-24 sm:pt-36 pb-16 sm:pb-24 border-b border-neutral-border/80 relative overflow-hidden bg-white"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -51,13 +51,13 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               {profile.bioSummary}
             </p>
 
-            {/* Action Buttons */}
+            {/* Action Buttons with distinct frame shade/shadow */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 w-full sm:w-auto mb-8">
               <a
                 href={`/${profile.cvFileName}`}
                 download={profile.cvFileName}
                 onClick={handleDownloadCv}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-neutral-heading text-white text-sm font-semibold shadow-md hover:bg-slate-800 hover:shadow-lg active:scale-95 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-neutral-heading focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-neutral-heading text-white text-sm font-semibold shadow-btn hover:shadow-btnHover hover:bg-slate-800 active:scale-95 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-neutral-heading focus-visible:ring-offset-2"
               >
                 <Download className="w-4 h-4" />
                 <span>Unduh CV Saya</span>
@@ -67,7 +67,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white border border-neutral-border text-neutral-heading text-sm font-semibold shadow-sm hover:border-brand-blue hover:text-brand-blue hover:bg-blue-50/50 active:scale-95 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white border-2 border-neutral-heading text-neutral-heading text-sm font-bold shadow-btn hover:shadow-btnHover hover:bg-slate-50 active:scale-95 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
                 aria-label="Hubungi Bapak Ali Susanto melalui WhatsApp"
               >
                 <MessageCircle className="w-4 h-4 text-emerald-600" />
@@ -77,49 +77,55 @@ export default function HeroSection({ profile }: HeroSectionProps) {
 
             {/* Toast Notification */}
             {toastMessage && (
-              <div className="mb-6 p-3 rounded-xl bg-blue-50 border border-blue-200 text-brand-blueDark text-xs flex items-center gap-2 animate-fade-in">
+              <div className="mb-6 p-3 rounded-xl bg-blue-50 border border-blue-200 text-brand-blueDark text-xs flex items-center gap-2 animate-fade-in shadow-sm">
                 <CheckCircle2 className="w-4 h-4 text-brand-blue shrink-0" />
                 <span>{toastMessage}</span>
               </div>
             )}
 
-            {/* Kartu Informasi: Kantor, Telepon, dan Domisili */}
-            <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-neutral-border/70">
+            {/* Kartu Informasi: Warna #A3A3A3 dengan bayangan tegas */}
+            <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-4 border-t border-neutral-border">
               {/* Kartu Kantor */}
-              <div className="bg-white border border-neutral-border p-3.5 rounded-xl shadow-card flex flex-col justify-between">
+              <div className="bg-[#A3A3A3] border border-neutral-borderHover p-4 rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-heading mb-1.5">
-                    <Building2 className="w-4 h-4 text-brand-blue shrink-0" />
+                  <div className="flex items-center gap-2 text-xs font-bold text-neutral-heading mb-1.5">
+                    <div className="w-6 h-6 rounded-md bg-white text-brand-blue flex items-center justify-center shadow-xs">
+                      <Building2 className="w-3.5 h-3.5" />
+                    </div>
                     <span>Kantor</span>
                   </div>
-                  <p className="text-xs text-neutral-body leading-relaxed">
+                  <p className="text-xs text-neutral-heading font-medium leading-relaxed">
                     {profile.officeAddress}
                   </p>
                 </div>
               </div>
 
               {/* Kartu Telepon */}
-              <div className="bg-white border border-neutral-border p-3.5 rounded-xl shadow-card flex flex-col justify-between">
+              <div className="bg-[#A3A3A3] border border-neutral-borderHover p-4 rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-heading mb-1.5">
-                    <Phone className="w-4 h-4 text-brand-blue shrink-0" />
+                  <div className="flex items-center gap-2 text-xs font-bold text-neutral-heading mb-1.5">
+                    <div className="w-6 h-6 rounded-md bg-white text-brand-blue flex items-center justify-center shadow-xs">
+                      <Phone className="w-3.5 h-3.5" />
+                    </div>
                     <span>Telepon / HP</span>
                   </div>
-                  <p className="text-xs font-bold text-neutral-heading tracking-wide">
+                  <p className="text-xs font-extrabold text-neutral-heading tracking-wide mt-1">
                     {profile.phone}
                   </p>
                 </div>
-                <span className="text-[11px] text-neutral-muted mt-2">Kanal Resmi</span>
+                <span className="text-[11px] font-semibold text-slate-800 mt-2">Kanal Resmi</span>
               </div>
 
               {/* Kartu Domisili */}
-              <div className="bg-white border border-neutral-border p-3.5 rounded-xl shadow-card flex flex-col justify-between">
+              <div className="bg-[#A3A3A3] border border-neutral-borderHover p-4 rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-heading mb-1.5">
-                    <MapPin className="w-4 h-4 text-brand-blue shrink-0" />
+                  <div className="flex items-center gap-2 text-xs font-bold text-neutral-heading mb-1.5">
+                    <div className="w-6 h-6 rounded-md bg-white text-brand-blue flex items-center justify-center shadow-xs">
+                      <MapPin className="w-3.5 h-3.5" />
+                    </div>
                     <span>Domisili</span>
                   </div>
-                  <p className="text-xs text-neutral-body leading-relaxed">
+                  <p className="text-xs text-neutral-heading font-medium leading-relaxed">
                     {profile.homeAddress}
                   </p>
                 </div>
@@ -127,7 +133,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
             </div>
           </div>
 
-          {/* Right Column: Profile Photo Frame (9:16) */}
+          {/* Right Column: Profile Photo Frame (9:16) with Card Shade */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <ProfilePhotoFrame name={profile.name} />
           </div>

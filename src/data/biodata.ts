@@ -52,7 +52,7 @@ export const educationData: EducationItem[] = [
     id: "edu-f-4",
     type: "formal",
     institution: "SMT Pertanian Negeri Tegal",
-    majorOrFocus: "Pertanian",
+    majorOrFocus: "Teknologi Hasil Pertanian",
     period: "1986 – 1989",
     location: "Tegal",
   },
@@ -115,7 +115,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Ketua Pengawas",
     institution: "Pusat Koperasi Pegawai Republik Indonesia Kota Bogor",
     period: "2026 – Sekarang",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Koperasi",
   },
   {
@@ -123,7 +123,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Penasehat",
     institution: "Paguyuban UMKM Kota Bogor",
     period: "2026 – Sekarang",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Organisasi",
   },
   {
@@ -131,7 +131,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Pengawas Koperasi",
     institution: "Koperasi Produsen Ketahanan Pangan Nusantara",
     period: "2026 – Sekarang",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Koperasi",
   },
   {
@@ -140,7 +140,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     institution:
       "Dinas Koperasi UKM, Perdagangan dan Perindustrian Kota Bogor",
     period: "2025 – Sekarang",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -148,7 +148,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Pengawas Koperasi",
     institution: "KPRI Beriman Pemda Kota Bogor",
     period: "2025 – Sekarang",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Koperasi",
   },
   {
@@ -156,7 +156,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Ketua",
     institution: "KPRI Swakerta Raharja Dinkukmdagin",
     period: "2022 – Sekarang",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Koperasi",
   },
   {
@@ -165,7 +165,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     institution:
       "Dinas Koperasi UKM, Perdagangan dan Perindustrian Kota Bogor",
     period: "Juni 2026 – Juli 2026",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -173,7 +173,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Sekretaris",
     institution: "Pusat Koperasi Pegawai Republik Indonesia Kota Bogor",
     period: "2021 – 2026",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Koperasi",
   },
   {
@@ -182,7 +182,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     institution:
       "Dinas Koperasi UKM, Perdagangan dan Perindustrian Kota Bogor",
     period: "2020 – 2025",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -190,7 +190,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Kepala Bidang Organisasi dan Pelatihan",
     institution: "DEKOPIN Kota Bogor",
     period: "2020 – 2025",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Organisasi",
   },
   {
@@ -198,7 +198,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Kepala Seksi Pengawasan Koperasi",
     institution: "Dinas Koperasi dan UMK Kota Bogor",
     period: "2020 – 2020",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -206,7 +206,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Kepala Seksi Kelembagaan Koperasi",
     institution: "Dinas Koperasi dan UMK Kota Bogor",
     period: "2017 – 2020",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -214,7 +214,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Kepala Seksi Kelembagaan Koperasi",
     institution: "Dinas Koperasi dan UMK Kota Bogor",
     period: "2015 – 2017",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -222,7 +222,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Kepala Seksi Bina Lembaga dan Usaha-Usaha Koperasi",
     institution: "Kantor Dinas Koperasi dan UMK Kota Bogor",
     period: "2013 – 2015",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -230,7 +230,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Kepala Seksi Kemasyarakatan",
     institution: "Kelurahan Cilendek Barat, Kecamatan Bogor Barat",
     period: "2010 – 2012",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -239,7 +239,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     institution:
       "Koperasi Pegawai Republik Indonesia Berkah Bersama Dinas Pertanian Kota Bogor",
     period: "2007 – 2012",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Koperasi",
   },
   {
@@ -247,7 +247,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Kepala",
     institution: "Lembaga Pendidikan Perkoperasian Kota Bogor",
     period: "2002 – 2025",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Pendidikan",
   },
   {
@@ -255,7 +255,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Petugas Konsultasi Lapangan (PKL)",
     institution: "Kandepkop PK dan M Kota Bogor Provinsi Jawa Barat",
     period: "1997 – 2000",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -263,7 +263,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Kepala Sekolah SMU Islam",
     institution: "Perguruan Islam Al-UMM",
     period: "1997 – 1998",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Pendidikan",
   },
   {
@@ -271,7 +271,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Tenaga Pendamping",
     institution: "DEKOPINDA Kabupaten Bogor",
     period: "1997 – 1998",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Organisasi",
   },
   {
@@ -279,7 +279,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Petugas Konsultasi Lapangan (PKL)",
     institution: "Kanwil Departemen Koperasi PK dan M Provinsi Jawa Barat",
     period: "1997 – 1998",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Dinas",
   },
   {
@@ -287,7 +287,7 @@ export const workExperienceData: WorkExperienceItem[] = [
     position: "Asisten Dosen",
     institution: "Fakultas Pertanian Universitas Djuanda",
     period: "1995 – 1997",
-    location: "Jawa Barat",
+    location: "Bogor",
     category: "Pendidikan",
   },
 ];
@@ -298,70 +298,70 @@ export const organizationData: OrganizationItem[] = [
     role: "Sekretaris",
     organization: "ICMI ORSAT Amaliah Bogor",
     period: "2000 – 2015",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
   {
     id: "org-2",
     role: "Bidang Ekonomi",
     organization: "ICMI ORWIL SUSB",
     period: "2000 – 2010",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
   {
     id: "org-3",
     role: "HUMAS",
     organization: "Senat Siswa PUSDIKART TNI – AD",
     period: "1997 – 1998",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
   {
     id: "org-4",
     role: "Sekretaris Jenderal",
     organization: "Asosiasi Wirausaha Muda TKPM IPB",
     period: "1996 – 1998",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
   {
     id: "org-5",
     role: "Ketua Umum",
     organization: "Koperasi Mahasiswa (KOPMA)",
     period: "1994 – 1997",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
   {
     id: "org-6",
     role: "Wakil Ketua",
     organization: "Ikatan Remaja Masjid Amaliah (IRMA) Bogor",
     period: "1994 – 1997",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
   {
     id: "org-7",
     role: "Ketua",
     organization: "Senat Mahasiswa",
     period: "1994 – 1995",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
   {
     id: "org-8",
     role: "Sekretaris",
     organization: "BKPK DEKOPINDA Kabupaten Bogor",
     period: "1993 – 1998",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
   {
     id: "org-9",
     role: "Bidang Pendidikan",
     organization: "Majelis Ukhuwah Islamiah",
     period: "1992 – 1993",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
   {
     id: "org-10",
     role: "Ketua Bidang Komunikasi",
     organization: "Himpunan Keprofesian",
     period: "1992 – 1993",
-    location: "Jawa Barat",
+    location: "Bogor",
   },
 ];
 

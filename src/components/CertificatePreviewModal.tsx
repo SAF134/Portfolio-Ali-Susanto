@@ -7,7 +7,6 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
-  Maximize2,
   ImageOff,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -66,28 +65,28 @@ export default function CertificatePreviewModal({
         onClick={(e) => e.stopPropagation()}
       >
         {/* 1. Header Bar Modal */}
-        <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-slate-200">
-          {/* Title & Counter */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            <h3 className="text-base sm:text-lg font-extrabold text-neutral-heading tracking-tight">
-              Pratinjau Sertifikat
-            </h3>
-            <span className="px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-mono font-semibold text-slate-700">
-              {selectedIndex + 1} dari {certificates.length}
-            </span>
+        <div className="flex items-start sm:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-slate-200">
+          {/* Title, Counter & Certificate Name */}
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <h3 className="text-base sm:text-lg font-extrabold text-neutral-heading tracking-tight">
+                Pratinjau Sertifikat
+              </h3>
+              <span className="px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-mono font-semibold text-slate-700 shrink-0">
+                {selectedIndex + 1} dari {certificates.length}
+              </span>
+            </div>
+            {/* Informasi Lengkap Nama Sertifikat */}
+            <p
+              className="text-sm sm:text-base font-extrabold text-neutral-heading mt-1 sm:mt-1.5 truncate text-slate-900"
+              title={currentCert.title}
+            >
+              {currentCert.title}
+            </p>
           </div>
 
-          {/* Action Buttons: Desain disamakan dengan Tombol Lihat Detail (Hitam, rounded-full, shadow-btn, animasi tekan) */}
-          <div className="flex items-center gap-2 sm:gap-2.5">
-            <button
-              type="button"
-              onClick={handleOpenOriginalImage}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-neutral-heading text-white text-xs font-bold shadow-btn hover:shadow-btnHover hover:bg-slate-800 active:scale-90 hover:scale-105 transition-all duration-150"
-            >
-              <Maximize2 className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Buka Gambar Penuh</span>
-            </button>
-
+          {/* Action Button: Tombol Tutup Pratinjau */}
+          <div className="flex items-center shrink-0 pt-0.5 sm:pt-0">
             <button
               type="button"
               onClick={onClose}
@@ -101,21 +100,21 @@ export default function CertificatePreviewModal({
 
         {/* 2. Main Content: Certificate Frame (Rasio A4 Landscape) dengan Tombol Navigasi Kiri & Kanan */}
         <div className="relative my-3 sm:my-4 flex-1 flex items-center justify-center bg-slate-100 rounded-xl sm:rounded-2xl p-2 sm:p-6 overflow-hidden min-h-[300px] sm:min-h-[440px]">
-          {/* Floating Left Button (Previous) dengan animasi tekan */}
+          {/* Floating Left Button (Previous) - Desain seperti Tombol Lihat Resolusi Asli */}
           <button
             type="button"
             onClick={onPrev}
-            className="absolute left-2 sm:left-4 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white shadow-btn border border-slate-300 flex items-center justify-center text-neutral-heading hover:bg-slate-50 active:scale-90 hover:scale-110 transition-all duration-150"
+            className="absolute left-2 sm:left-4 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-neutral-heading text-white shadow-btn hover:shadow-btnHover hover:bg-slate-800 active:scale-90 hover:scale-110 transition-all duration-150 flex items-center justify-center"
             aria-label="Sertifikat sebelumnya"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
-          {/* Floating Right Button (Next) dengan animasi tekan */}
+          {/* Floating Right Button (Next) - Desain seperti Tombol Lihat Resolusi Asli */}
           <button
             type="button"
             onClick={onNext}
-            className="absolute right-2 sm:right-4 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white shadow-btn border border-slate-300 flex items-center justify-center text-neutral-heading hover:bg-slate-50 active:scale-90 hover:scale-110 transition-all duration-150"
+            className="absolute right-2 sm:right-4 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-neutral-heading text-white shadow-btn hover:shadow-btnHover hover:bg-slate-800 active:scale-90 hover:scale-110 transition-all duration-150 flex items-center justify-center"
             aria-label="Sertifikat selanjutnya"
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -183,10 +182,6 @@ export default function CertificatePreviewModal({
 
         {/* 3. Footer Bar Modal */}
         <div className="pt-2 sm:pt-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-          <p className="flex items-center gap-1 text-[11px] sm:text-xs">
-            <span>Gunakan tombol panah ◄ ► pada keyboard untuk navigasi cepat antar sertifikat.</span>
-          </p>
-
           {/* Tombol Lihat Resolusi Asli: Desain disamakan dengan Tombol Lihat Detail */}
           <button
             type="button"
@@ -196,6 +191,14 @@ export default function CertificatePreviewModal({
             <span>Lihat resolusi asli</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </button>
+
+          {/* Informasi Lengkap Nama Sertifikat di Footer */}
+          <p
+            className="text-xs sm:text-sm font-extrabold text-neutral-heading truncate max-w-sm sm:max-w-md text-center sm:text-right"
+            title={currentCert.title}
+          >
+            {currentCert.title}
+          </p>
         </div>
       </div>
     </div>

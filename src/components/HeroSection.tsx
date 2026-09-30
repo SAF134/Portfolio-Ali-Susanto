@@ -117,14 +117,14 @@ export default function HeroSection({ profile }: HeroSectionProps) {
                 </div>
               </div>
 
-              {/* Kartu Domisili */}
+              {/* Kartu Alamat */}
               <div className="bg-[#D9D9D9] border border-neutral-borderHover p-2.5 sm:p-4 rounded-xl sm:rounded-2xl shadow-card hover:shadow-cardHover transition-all duration-300 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-xs font-bold text-neutral-heading mb-1 sm:mb-1.5">
                     <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-md bg-white text-brand-blue flex items-center justify-center shadow-xs shrink-0">
                       <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     </div>
-                    <span className="truncate">Domisili</span>
+                    <span className="truncate">Alamat</span>
                   </div>
                   <p className="text-[10px] sm:text-xs text-neutral-heading font-medium leading-tight sm:leading-relaxed">
                     {profile.homeAddress}

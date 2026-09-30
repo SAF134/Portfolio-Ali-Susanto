@@ -20,10 +20,10 @@ export default function Footer({ profile }: FooterProps) {
       <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="font-medium">© 2026 {profile.name}. Hak Cipta Dilindungi.</p>
 
-        <button
+<button
           type="button"
           onClick={scrollToTop}
-          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-slate-300 hover:bg-slate-50 text-neutral-heading font-bold transition-all shadow-btn hover:shadow-btnHover focus-visible:ring-2 focus-visible:ring-brand-blue"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#d9d9d9] border border-slate-300 hover:brightness-95 text-neutral-heading font-bold transition-all duration-150 active:scale-90 hover:scale-105 shadow-btn hover:shadow-btnHover focus-visible:ring-2 focus-visible:ring-brand-blue"
           aria-label="Kembali ke atas"
         >
           <span>Kembali ke Atas</span>

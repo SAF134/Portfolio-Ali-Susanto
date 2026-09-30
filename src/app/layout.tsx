@@ -17,7 +17,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ali Susanto, S.Pt., M.Si. | Portfolio & Rekam Jejak Eksekutif",
+  title: "Ali-Susanto/Portfolio",
   description:
     "Website portfolio resmi Bapak Ali Susanto, S.Pt., M.Si. — Pengawas Koperasi Ahli Madya, birokrat senior, dan praktisi perkoperasian serta ketahanan pangan Kota Bogor, Jawa Barat.",
   keywords: [

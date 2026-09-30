@@ -11,15 +11,14 @@ export const profileData: ProfileData = {
   titles: "S.Pt., M.Si.",
   role: "Pengawas Koperasi Ahli Madya",
   bioSummary:
-    "Birokrat dan praktisi perkoperasian senior dengan pengalaman lebih dari tiga dekade dalam pengawasan tata kelola koperasi, pembinaan kelembagaan UMKM, dan pemberdayaan ekonomi masyarakat. Memiliki rekam jejak kepemimpinan struktural di instansi pemerintah daerah Kota Bogor serta gerakan koperasi pegawai Republik Indonesia.",
+    "Birokrat dan pakar tata kelola perkoperasian dengan dedikasi lebih dari tiga dekade dalam pengawasan, pembinaan kelembagaan, dan transformasi ekonomi kerakyatan di Kota Bogor. Berbekal kepemimpinan struktural sebagai mantan Kepala Bidang Koperasi dan kini Pengawas Koperasi Ahli Madya, serta latar belakang keilmuan Magister Ekonomi Pembangunan, saya berkomitmen memperkuat akuntabilitas koperasi, memberdayakan ekosistem UMKM daerah, dan memajukan gerakan koperasi pegawai yang sehat, mandiri, dan berdaya saing.",
   officeAddress: "Jalan Dadali Nomor 4, RT.03/RW.06, Tanah Sareal, Kota Bogor",
-  homeAddress:
-    "Villa Mutiara Bogor Blok I-01 Nomor 36, Kelurahan Mekarwangi, Kecamatan Tanah Sareal, Kota Bogor",
+  homeAddress: "Tanah Sareal, Kota Bogor, Jawa Barat",
   phone: "087870926855",
   whatsappNumber: "6287870926855",
   whatsappMessage:
-    "Halo Bapak Ali Susanto, saya menghubungi Anda melalui website portfolio resmi untuk keperluan diskusi dan koordinasi.",
-  avatarPlaceholderText: "Belum ada gambar",
+    "Halo Bapak Ali Susanto, saya menghubungi Anda melalui website portfolio Anda untuk keperluan diskusi dan koordinasi.",
+  imageSrc: "/images/profile/foto-profil-syauqi.webp",
   cvFileName: "CV-Ali-Susanto.pdf",
 };
 
@@ -79,7 +78,7 @@ export const educationData: EducationItem[] = [
     type: "non-formal",
     institution: "Departemen Koperasi, PK dan M Republik Indonesia",
     majorOrFocus:
-      "Pendidikan dan Pelatihan Bagi Petugas Konsultasi Lapangan (PKL) Se-Indonesia",
+      "Pendidikan dan Pelatihan Bagi Petugas Konsultasi Lapangan (PKL) se-Indonesia",
     period: "1997 – 1998",
     location: "Cimahi",
   },
@@ -113,63 +112,61 @@ export const educationData: EducationItem[] = [
 export const workExperienceData: WorkExperienceItem[] = [
   {
     id: "work-1",
-    position: "Plt. Kepala Bidang Koperasi",
-    institution:
-      "Dinas Koperasi UKM, Perdagangan dan Perindustrian Kota Bogor",
-    period: "01 Juni 2026 – Juli 2026",
-    location: "Jawa Barat",
-    category: "Dinas",
-  },
-  {
-    id: "work-2",
     position: "Ketua Pengawas",
     institution: "Pusat Koperasi Pegawai Republik Indonesia Kota Bogor",
-    period: "2026 – 2031",
+    period: "2026 – Sekarang",
     location: "Jawa Barat",
     category: "Koperasi",
   },
   {
-    id: "work-3",
+    id: "work-2",
     position: "Penasehat",
     institution: "Paguyuban UMKM Kota Bogor",
-    period: "2026 – 2031",
+    period: "2026 – Sekarang",
     location: "Jawa Barat",
     category: "Organisasi",
   },
   {
-    id: "work-4",
+    id: "work-3",
     position: "Pengawas Koperasi",
     institution: "Koperasi Produsen Ketahanan Pangan Nusantara",
-    period: "2026 – 2030",
+    period: "2026 – Sekarang",
     location: "Jawa Barat",
     category: "Koperasi",
   },
   {
-    id: "work-5",
+    id: "work-4",
     position: "Pengawas Koperasi Ahli Madya",
     institution:
       "Dinas Koperasi UKM, Perdagangan dan Perindustrian Kota Bogor",
     period: "2025 – Sekarang",
     location: "Jawa Barat",
-    isCurrent: true,
     category: "Dinas",
   },
   {
-    id: "work-6",
+    id: "work-5",
     position: "Pengawas Koperasi",
     institution: "KPRI Beriman Pemda Kota Bogor",
-    period: "2025 – 2031",
+    period: "2025 – Sekarang",
+    location: "Jawa Barat",
+    category: "Koperasi",
+  },
+  {
+    id: "work-6",
+    position: "Ketua",
+    institution: "KPRI Swakerta Raharja Dinkukmdagin",
+    period: "2022 – Sekarang",
     location: "Jawa Barat",
     category: "Koperasi",
   },
   {
     id: "work-7",
-    position: "Ketua",
-    institution: "KPRI Swakerta Raharja Dinkukmdagin",
-    period: "2022 – Sekarang",
+    position: "Pelatihan Kepala Bidang Koperasi",
+    institution:
+      "Dinas Koperasi UKM, Perdagangan dan Perindustrian Kota Bogor",
+    period: "Juni 2026 – Juli 2026",
     location: "Jawa Barat",
-    isCurrent: true,
-    category: "Koperasi",
+    category: "Dinas",
   },
   {
     id: "work-8",
@@ -190,7 +187,7 @@ export const workExperienceData: WorkExperienceItem[] = [
   },
   {
     id: "work-10",
-    position: "Kabid Organisasi dan Pelatihan",
+    position: "Kepala Bidang Organisasi dan Pelatihan",
     institution: "DEKOPIN Kota Bogor",
     period: "2020 – 2025",
     location: "Jawa Barat",
@@ -256,7 +253,7 @@ export const workExperienceData: WorkExperienceItem[] = [
   {
     id: "work-18",
     position: "Petugas Konsultasi Lapangan (PKL)",
-    institution: "Kandepkop PK dan M Kota Bogor Propinsi Jawa Barat",
+    institution: "Kandepkop PK dan M Kota Bogor Provinsi Jawa Barat",
     period: "1997 – 2000",
     location: "Jawa Barat",
     category: "Dinas",
@@ -272,7 +269,7 @@ export const workExperienceData: WorkExperienceItem[] = [
   {
     id: "work-20",
     position: "Tenaga Pendamping",
-    institution: "DEKOPINDA Kab Bogor",
+    institution: "DEKOPINDA Kabupaten Bogor",
     period: "1997 – 1998",
     location: "Jawa Barat",
     category: "Organisasi",
@@ -280,7 +277,7 @@ export const workExperienceData: WorkExperienceItem[] = [
   {
     id: "work-21",
     position: "Petugas Konsultasi Lapangan (PKL)",
-    institution: "Kanwil Departemen Koperasi PK dan M Propinsi Jawa Barat",
+    institution: "Kanwil Departemen Koperasi PK dan M Provinsi Jawa Barat",
     period: "1997 – 1998",
     location: "Jawa Barat",
     category: "Dinas",
@@ -288,7 +285,7 @@ export const workExperienceData: WorkExperienceItem[] = [
   {
     id: "work-22",
     position: "Asisten Dosen",
-    institution: "Fakultas Pertanian Univ. Djuanda",
+    institution: "Fakultas Pertanian Universitas Djuanda",
     period: "1995 – 1997",
     location: "Jawa Barat",
     category: "Pendidikan",
@@ -348,7 +345,7 @@ export const organizationData: OrganizationItem[] = [
   {
     id: "org-8",
     role: "Sekretaris",
-    organization: "BKPK DEKOPINDA Kab Bogor",
+    organization: "BKPK DEKOPINDA Kabupaten Bogor",
     period: "1993 – 1998",
     location: "Jawa Barat",
   },
@@ -372,57 +369,8 @@ export const certificatePlaceholders: CertificateFrameItem[] = [
   {
     id: "cert-1",
     code: "Sertifikat #01",
-    title: "Piagam Pengawasan & Tata Kelola Perkoperasian",
+    title: "Sertifikasi Profesi Penilai Aset",
     aspectRatio: "1.414 / 1",
-    placeholderText: "Belum ada gambar",
-  },
-  {
-    id: "cert-2",
-    code: "Sertifikat #02",
-    title: "Sertifikasi Kompetensi Pengawas Koperasi Ahli Madya",
-    aspectRatio: "1.414 / 1",
-    placeholderText: "Belum ada gambar",
-  },
-  {
-    id: "cert-3",
-    code: "Sertifikat #03",
-    title: "Piagam Pelatihan Hankamneg & Ketahanan Nasional",
-    aspectRatio: "1.414 / 1",
-    placeholderText: "Belum ada gambar",
-  },
-  {
-    id: "cert-4",
-    code: "Sertifikat #04",
-    title: "Sertifikat Pembinaan Tenaga Kerja Sarjana Terdidik",
-    aspectRatio: "1.414 / 1",
-    placeholderText: "Belum ada gambar",
-  },
-  {
-    id: "cert-5",
-    code: "Sertifikat #05",
-    title: "Piagam Penghargaan Pembina UMKM Berprestasi Kota Bogor",
-    aspectRatio: "1.414 / 1",
-    placeholderText: "Belum ada gambar",
-  },
-  {
-    id: "cert-6",
-    code: "Sertifikat #06",
-    title: "Sertifikat Diklat Manajemen Perkoperasian Tingkat Nasional",
-    aspectRatio: "1.414 / 1",
-    placeholderText: "Belum ada gambar",
-  },
-  {
-    id: "cert-7",
-    code: "Sertifikat #07",
-    title: "Piagam Bakti Pengabdian Dewan Koperasi Indonesia (DEKOPIN)",
-    aspectRatio: "1.414 / 1",
-    placeholderText: "Belum ada gambar",
-  },
-  {
-    id: "cert-8",
-    code: "Sertifikat #08",
-    title: "Penghargaan Kepemimpinan Koperasi Pegawai Republik Indonesia",
-    aspectRatio: "1.414 / 1",
-    placeholderText: "Belum ada gambar",
-  },
+    placeholderText: "Belum ada gambar",    imageSrc: "/images/certificates/sertif-greatnusa-1.webp",
+  }
 ];

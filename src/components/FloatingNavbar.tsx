@@ -65,10 +65,8 @@ export default function FloatingNavbar() {
     <header className="fixed bottom-4 sm:bottom-auto sm:top-6 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
       <nav
         aria-label="Navigasi Utama Portofolio"
-        className={`pointer-events-auto flex items-center justify-center gap-1.5 sm:gap-2 p-1.5 sm:p-2 rounded-full border border-slate-300 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-nav"
-            : "bg-white/90 backdrop-blur-sm shadow-card"
+        className={`pointer-events-auto flex items-center justify-center gap-1.5 sm:gap-2 p-1.5 sm:p-2 rounded-full border border-slate-400/80 bg-[#D9D9D9] transition-all duration-300 shadow-[0_12px_28px_-4px_rgba(0,0,0,0.28),0_6px_12px_-2px_rgba(0,0,0,0.18)] ${
+          scrolled ? "backdrop-blur-md ring-1 ring-black/10" : ""
         }`}
       >
         {navItems.map((item) => {
@@ -81,10 +79,10 @@ export default function FloatingNavbar() {
               href={`#${item.id}`}
               onClick={(e) => scrollToSection(e, item.id)}
               aria-label={item.label}
-              className={`flex items-center justify-center gap-2 p-2.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue ${
+              className={`flex items-center justify-center gap-2 p-2.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 active:scale-90 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue ${
                 isActive
-                  ? "bg-neutral-heading text-white font-bold shadow-btn"
-                  : "text-neutral-body hover:text-neutral-heading hover:bg-slate-100/90"
+                  ? "bg-neutral-heading text-white shadow-btn"
+                  : "text-neutral-heading hover:bg-slate-300/80"
               }`}
               aria-current={isActive ? "page" : undefined}
             >

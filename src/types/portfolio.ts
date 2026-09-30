@@ -8,8 +8,8 @@ export interface ProfileData {
   phone: string;
   whatsappNumber: string;
   whatsappMessage: string;
-  avatarPlaceholderText: string;
   cvFileName: string;
+  imageSrc?: string;
 }
 
 export interface EducationItem {
@@ -27,7 +27,6 @@ export interface WorkExperienceItem {
   institution: string;
   period: string;
   location: string;
-  isCurrent?: boolean;
   category?: "Dinas" | "Koperasi" | "Organisasi" | "Pendidikan";
 }
 

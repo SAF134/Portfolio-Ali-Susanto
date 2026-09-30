@@ -18,7 +18,7 @@ export default function OrganizationSection({
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-heading">
             Jejak Organisasi & <span className="text-brand-blue">Pengabdian.</span>
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-neutral-muted">
+          <p className="mt-3 text-sm sm:text-base text-neutral-body">
             Kontribusi kepemimpinan dalam organisasi kemasyarakatan, kepemudaan, dan gerakan
             perkoperasian.
           </p>

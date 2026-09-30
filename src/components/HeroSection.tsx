@@ -13,7 +13,6 @@ export default function HeroSection({ profile }: HeroSectionProps) {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const handleDownloadCv = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // If physical PDF file does not exist yet in public/, notify the user gracefully
     setToastMessage("Mengunduh berkas CV... (File sedang dalam proses pembaharuan)");
     setTimeout(() => setToastMessage(null), 4000);
   };
@@ -25,38 +24,30 @@ export default function HeroSection({ profile }: HeroSectionProps) {
   return (
     <section
       id="profil"
-      className="pt-28 sm:pt-36 pb-16 sm:pb-24 border-b border-neutral-border/60 relative overflow-hidden"
+      className="pt-24 sm:pt-36 pb-16 sm:pb-24 border-b border-neutral-border/60 relative overflow-hidden"
     >
-      {/* Background Ambience Shaders */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-blue-100/40 via-slate-200/30 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
-
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Bio & Identity */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            {/* Status Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-status-greenBg border border-emerald-200 text-status-greenText text-xs font-semibold shadow-xs mb-4">
-              <span className="w-2 h-2 rounded-full bg-status-greenDot animate-pulse" />
-              <span>Tersedia untuk Sinergi & Pengawasan Koperasi</span>
-            </div>
-
             {/* Kicker */}
             <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-neutral-muted mb-2">
               Halo, Perkenalkan Saya
             </p>
 
-            {/* Name & Titles */}
+            {/* Nama lengkap disambung dengan gelar */}
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-neutral-heading leading-tight mb-2">
-              {profile.name}
+              {profile.name} {profile.titles}
               <span className="text-brand-blue">.</span>
             </h1>
-            <p className="text-lg sm:text-xl font-bold text-neutral-body mb-4">
-              {profile.titles} —{" "}
-              <span className="text-brand-blue font-semibold">{profile.role}</span>
+
+            {/* Jabatan Utama */}
+            <p className="text-lg sm:text-xl font-bold text-brand-blue mb-4">
+              {profile.role}
             </p>
 
-            {/* Narrative Bio */}
-            <p className="text-sm sm:text-base text-neutral-body leading-relaxed max-w-xl mb-6">
+            {/* Narrative Bio (Text Justify) */}
+            <p className="text-sm sm:text-base text-neutral-body leading-relaxed max-w-xl mb-6 text-justify">
               {profile.bioSummary}
             </p>
 
@@ -92,33 +83,51 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               </div>
             )}
 
-            {/* Direct Contact Metadata Chips */}
-            <div className="w-full pt-6 border-t border-neutral-border/70 space-y-2 text-xs sm:text-sm text-neutral-muted">
-              <div className="flex items-start gap-2.5">
-                <Building2 className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" />
-                <span>
-                  <strong className="text-neutral-body">Kantor:</strong>{" "}
-                  {profile.officeAddress}
-                </span>
+            {/* Kartu Informasi: Kantor, Telepon, dan Domisili */}
+            <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-neutral-border/70">
+              {/* Kartu Kantor */}
+              <div className="bg-white border border-neutral-border p-3.5 rounded-xl shadow-card flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-heading mb-1.5">
+                    <Building2 className="w-4 h-4 text-brand-blue shrink-0" />
+                    <span>Kantor</span>
+                  </div>
+                  <p className="text-xs text-neutral-body leading-relaxed">
+                    {profile.officeAddress}
+                  </p>
+                </div>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-brand-blue shrink-0" />
-                <span>
-                  <strong className="text-neutral-body">Telepon:</strong>{" "}
-                  {profile.phone}
-                </span>
+
+              {/* Kartu Telepon */}
+              <div className="bg-white border border-neutral-border p-3.5 rounded-xl shadow-card flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-heading mb-1.5">
+                    <Phone className="w-4 h-4 text-brand-blue shrink-0" />
+                    <span>Telepon / HP</span>
+                  </div>
+                  <p className="text-xs font-bold text-neutral-heading tracking-wide">
+                    {profile.phone}
+                  </p>
+                </div>
+                <span className="text-[11px] text-neutral-muted mt-2">Kanal Resmi</span>
               </div>
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" />
-                <span>
-                  <strong className="text-neutral-body">Domisili:</strong>{" "}
-                  {profile.homeAddress}
-                </span>
+
+              {/* Kartu Domisili */}
+              <div className="bg-white border border-neutral-border p-3.5 rounded-xl shadow-card flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-heading mb-1.5">
+                    <MapPin className="w-4 h-4 text-brand-blue shrink-0" />
+                    <span>Domisili</span>
+                  </div>
+                  <p className="text-xs text-neutral-body leading-relaxed">
+                    {profile.homeAddress}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Profile Photo Frame */}
+          {/* Right Column: Profile Photo Frame (9:16) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <ProfilePhotoFrame name={profile.name} />
           </div>

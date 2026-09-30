@@ -10,7 +10,7 @@
   }
 
   body {
-    background-color: #F8FAFC;
+    background-color: #858585;
     color: #0F172A;
     overflow-x: hidden;
   }
@@ -21,22 +21,22 @@
   }
 }
 
-/* Subtle custom scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #737373;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #94A3B8;
+  background: #4a4a4a;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748B;
+  background: #333333;
 }
 
 /* Accessibility: respect reduced motion preferences */

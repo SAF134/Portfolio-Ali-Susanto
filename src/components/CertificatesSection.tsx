@@ -14,14 +14,14 @@ export default function CertificatesSection({
   const [selectedCert, setSelectedCert] = useState<CertificateFrameItem | null>(null);
 
   return (
-    <section id="sertifikat" className="py-20 sm:py-28 bg-canvas-subtle/50">
+    <section id="sertifikat" className="py-20 sm:py-28 border-b border-neutral-border/60">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-heading">
             Sertifikat & <span className="text-brand-blue">Penghargaan.</span>
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-neutral-muted">
+          <p className="mt-3 text-sm sm:text-base text-neutral-body">
             Bukti kompetensi pengawasan, diklat kedinasan, dan apresiasi pengabdian lembaga.
           </p>
           <div className="inline-flex items-center gap-2 mt-4 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-brand-blue text-xs font-semibold">

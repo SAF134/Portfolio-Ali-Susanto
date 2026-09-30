@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 interface MotionRevealProps {
   children: ReactNode;
@@ -14,9 +14,16 @@ export default function MotionReveal({
   delay = 0,
   className = "",
 }: MotionRevealProps) {
+  const [mounted, setMounted] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
-  if (shouldReduceMotion) {
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Jika belum dimount di browser (SSR) atau pengguna mengaktifkan Reduced Motion di OS,
+  // langsung render div standar agar konten 100% terlihat tanpa atribut opacity: 0
+  if (!mounted || shouldReduceMotion) {
     return <div className={className}>{children}</div>;
   }
 

@@ -14,8 +14,8 @@ const config: Config = {
       },
       colors: {
         canvas: {
-          main: "#F8FAFC",
-          subtle: "#F1F5F9",
+          main: "#858585",
+          subtle: "#7d7d7d",
           card: "#FFFFFF",
         },
         brand: {
@@ -25,10 +25,10 @@ const config: Config = {
           blueDark: "#1E40AF",
         },
         neutral: {
-          anchor: "#808080",
+          anchor: "#858585",
           heading: "#0F172A",
-          body: "#334155",
-          muted: "#64748B",
+          body: "#1E293B",
+          muted: "#334155",
           border: "#E2E8F0",
           borderHover: "#CBD5E1",
         },
@@ -39,9 +39,9 @@ const config: Config = {
         },
       },
       boxShadow: {
-        card: "0 2px 8px -2px rgba(15, 23, 42, 0.05), 0 1px 3px -1px rgba(15, 23, 42, 0.03)",
-        cardHover: "0 12px 24px -6px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(29, 78, 216, 0.06)",
-        nav: "0 10px 30px -10px rgba(15, 23, 42, 0.12)",
+        card: "0 4px 14px -2px rgba(0, 0, 0, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.08)",
+        cardHover: "0 16px 28px -6px rgba(0, 0, 0, 0.2), 0 6px 12px -2px rgba(29, 78, 216, 0.12)",
+        nav: "0 10px 30px -10px rgba(0, 0, 0, 0.25)",
         glow: "0 0 25px -5px rgba(37, 99, 235, 0.2)",
       },
       aspectRatio: {
